@@ -1,6 +1,6 @@
 context:
   name: pointblank
-  version: "0.11.0"
+  version: "0.11.1"
   python_min: '3.10'
 
 package:
@@ -9,7 +9,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/p/pointblank/pointblank-${{ version }}.tar.gz
-  sha256: 5c6ea37d6de396fffc7304533308191145a259e570ef721bb54b2f72c1af1903
+  sha256: ef05b5e5d4ddf508a1127459648fdc7b74b5fbc2f37810f8094fef517eb38f1b
 
 build:
   number: 0
