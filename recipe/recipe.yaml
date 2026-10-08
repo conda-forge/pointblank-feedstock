@@ -1,7 +1,6 @@
 context:
   name: pointblank
   version: "1.0.0"
-  python_min: '3.10'
 
 package:
   name: ${{ name|lower }}
@@ -24,8 +23,8 @@ requirements:
     - setuptools_scm >=6.2
   run:
     - python >=${{ python_min }}
-    - importlib-metadata
     - commonmark >=0.9.1
+    - importlib-metadata
     - great_tables >=0.22.0
     - narwhals >=2.0.1
     - typing_extensions >=3.10.0.0
@@ -33,13 +32,16 @@ requirements:
     - click >=8.0.0
     - rich >=13.0.0
     - pyyaml >=6.0.0
+    - anthropic >=0.68.0
 
 tests:
   - python:
       imports:
         - pointblank
       pip_check: true
-      python_version: ${{ python_min }}.*
+      python_version:
+        - ${{ python_min }}.*
+        - "*"
 
 about:
   license: MIT
