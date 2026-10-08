@@ -1,6 +1,6 @@
 context:
   name: pointblank
-  version: "0.27.0"
+  version: "1.0.1"
 
 package:
   name: ${{ name|lower }}
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/p/pointblank/pointblank-${{ version }}.tar.gz
-  sha256: 21ba7c00ccf601d38738099063fe6777ea0db86db6f63c1e9848337944c5c236
+  sha256: b67c0467a7cff99b55afebf2ef789165d9f9531c002e8d8679b6027a68cb241f
   patches:
     - make-anthropic-optional.patch
 
