@@ -10,6 +10,8 @@ package:
 source:
   url: https://pypi.org/packages/source/p/pointblank/pointblank-${{ version }}.tar.gz
   sha256: 21ba7c00ccf601d38738099063fe6777ea0db86db6f63c1e9848337944c5c236
+  patches:
+    - make-anthropic-optional.patch
 
 build:
   number: 0
