@@ -1,6 +1,6 @@
 context:
   name: pointblank
-  version: "1.1.1"
+  version: "<next version>"
 
 package:
   name: ${{ name|lower }}
@@ -8,9 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/p/pointblank/pointblank-${{ version }}.tar.gz
-  sha256: 9966007d7784f16a0a669ae24abf0adc9f2b1117bf1f8bd3c2c849ad9089da2f
-  patches:
-    - make-anthropic-optional.patch
+  sha256: <sha256 of the sdist>
 
 build:
   number: 0
@@ -27,13 +25,25 @@ requirements:
     - python >=${{ python_min }}
     - importlib-metadata
     - commonmark >=0.9.1
-    - great_tables >=0.22.0
-    - narwhals >=2.0.1
+    - great_tables >=1.1.0
+    - narwhals >=2.8.0
     - typing_extensions >=3.10.0.0
     - requests >=2.31.0
     - click >=8.0.0
     - rich >=13.0.0
     - pyyaml >=6.0.0
+  run_constraints:
+    # Optional dependencies (PyPI extras): only constrained when installed alongside
+    - pandas >=2.2.3
+    - polars >=1.33.0
+    - chatlas >=0.10.0
+    - anthropic >=0.68.0
+    - openai >=1.63.0
+    - opentelemetry-api >=1.23.0
+    - opentelemetry-sdk >=1.23.0
+    - ibis-framework-core >=11.0.0
+    - python-duckdb <2
+    - sqlglot >=23.4,<30.18
 
 tests:
   - python:
